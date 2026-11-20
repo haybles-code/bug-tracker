@@ -43,9 +43,7 @@ export default function AddBugModal({
   return (
     <div
       data-testid="add-bug-modal"
-      className={`fixed inset-0 bg-black bg-opacity-50 ${
-        isOpen ? "block" : "hidden"
-      }`}
+      className="fixed inset-0 z-50 bg-black/50"
     >
       <div className="flex items-center justify-center min-h-screen p-4">
         <form
@@ -54,6 +52,7 @@ export default function AddBugModal({
           className="bg-white rounded-lg p-6 w-full max-w-md"
         >
           <h2 className="text-xl font-bold mb-4">Add New Bug</h2>
+
           <div className="mb-4">
             <label
               htmlFor="title"
@@ -61,6 +60,7 @@ export default function AddBugModal({
             >
               Title
             </label>
+
             <input
               id="title"
               name="title"
@@ -81,6 +81,7 @@ export default function AddBugModal({
             >
               Description
             </label>
+
             <textarea
               id="description"
               name="description"
@@ -100,6 +101,7 @@ export default function AddBugModal({
             >
               Priority
             </label>
+
             <select
               id="priority"
               name="priority"
@@ -124,6 +126,7 @@ export default function AddBugModal({
             >
               Cancel
             </button>
+
             <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
